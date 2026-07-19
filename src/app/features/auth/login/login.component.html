@@ -1,0 +1,58 @@
+<div class="min-h-dvh bg-[#F4F8F2] flex flex-col justify-center px-8">
+
+    <div class="mx-auto w-full max-w-sm">
+
+        <div class="mb-24 flex flex-col items-center">
+
+            <img src="/brote.gif" alt="HuertIA" class="mb-4 h-44 w-44">
+
+            <h1 class="text-6xl font-bold text-[#36523C]">
+                HuertIA
+            </h1>
+
+            <p class="mt-2 text-center text-gray-600">
+                Gestor de jardín
+            </p>
+        </div>
+
+        <form class="space-y-5">
+            <div>
+                <label class="mb-2 block text-sm font-medium">
+                    Correo electrónico
+                </label>
+                <input type="email" placeholder="correo@ejemplo.com"
+                    class="w-full rounded-xl border border-gray-300 bg-white p-4 focus:border-[#4F7D5C] focus:outline-none">
+            </div>
+
+            <div>
+                <label class="mb-2 block text-sm font-medium">
+                    Contraseña
+                </label>
+
+                <input type="password" placeholder="••••••••"
+                    class="w-full rounded-xl border border-gray-300 bg-white p-4 focus:border-[#4F7D5C] focus:outline-none">
+            </div>
+
+            <button type="submit"
+                routerLink="/dashboard"
+                class="mt-6 w-full rounded-xl bg-[#4F7D5C] p-4 font-semibold text-white transition hover:opacity-90">
+                Iniciar sesión
+            </button>
+        </form>
+
+
+        
+        <div class="mt-8 text-center">
+            <button routerLink="/register">
+                Crear una cuenta
+            </button>
+        </div>
+
+        <div class="mt-4 text-center">
+            <button class="text-gray-500">
+                Continuar como invitado
+            </button>
+        </div>
+    </div>
+
+</div>

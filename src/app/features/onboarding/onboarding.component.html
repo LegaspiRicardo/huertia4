@@ -1,0 +1,49 @@
+<div class="container">
+    <button
+        class="skip"
+        (click)="skip()">
+        Omitir
+    </button>
+
+    <img
+        class="image"
+        [src]="slides[current()].image"
+        [alt]="slides[current()].title">
+
+    <section>
+
+        <h1>
+            {{ slides[current()].title }}
+        </h1>
+
+        <p>
+            {{ slides[current()].description }}
+        </p>
+
+    </section>
+
+    <div class="dots">
+
+        @for(slide of slides; track $index){
+
+            <span
+                class="dot"
+                [class.active]="current() === $index"
+                (click)="goTo($index)">
+            </span>
+
+        }
+
+    </div>
+
+    <button
+        class="primary"
+        (click)="next()">
+        @if(isLast()){
+            Comenzar
+        }@else{
+            Siguiente
+        }
+    </button>
+
+</div>
