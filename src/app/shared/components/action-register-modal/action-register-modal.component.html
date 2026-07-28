@@ -1,0 +1,80 @@
+@if(open){
+
+<div
+class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+    <div class="w-11/12 max-w-md rounded-3xl bg-white p-6">
+        <!-- PASO 1 -->
+        @if(step() === 1){
+        <h2 class="mb-2 text-2xl font-bold">
+            ¿Qué deseas registrar?
+        </h2>
+
+        <p class="mb-6 text-gray-500">
+            Selecciona una opción.
+        </p>
+
+        <div class="space-y-3">
+            @for(action of actions; track action.id){
+            <button
+                (click)="select(action)"
+                class="flex w-full items-center gap-4 rounded-2xl border p-4 transition"
+                [class.bg-green-100]="selectedAction()===action.id"
+                [class.border-green-700]="selectedAction()===action.id">
+<img
+    [src]="action.icon"
+    [alt]="action.name"
+    class="h-10 w-10 object-contain">
+
+                <span class="font-medium">
+                    {{action.name}}
+                </span>
+            </button>
+            }
+        </div>
+
+        <button
+            (click)="next()"
+            class="mt-8 w-full rounded-xl bg-[#4F7D5C] py-4 text-white">
+            Siguiente
+        </button>
+        }
+
+        <!-- PASO 2 -->
+        @if(step() === 2){
+        <h2 class="text-2xl font-bold">
+            Registrar
+        </h2>
+        <p class="mt-2 text-gray-600">
+            Tipo seleccionado:
+        </p>
+
+        <div class="my-6 rounded-xl bg-green-50 p-4 text-center text-xl font-semibold">
+            {{selectedAction()}}
+        </div>
+
+        <p class="text-gray-500">
+            Formulario en Construccióoooon.
+        </p>
+
+        <div class="mt-8 flex gap-3">
+            <button
+                (click)="back()"
+                class="flex-1 rounded-xl border py-3">
+                Atrás
+            </button>
+
+            <button
+                class="flex-1 rounded-xl bg-[#4F7D5C] py-3 text-white">
+                Continuar
+            </button>
+        </div>
+        }
+
+        <button
+            (click)="closeModal()"
+            class="mt-6 w-full text-gray-500">
+            Cerrar
+        </button>
+    </div>
+</div>
+}

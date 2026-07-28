@@ -1,0 +1,69 @@
+<!-- Botón flotante -->
+<button
+    (click)="toggleMenu()"
+    class="fixed top-8 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#4F7D5C] text-white shadow-xl transition hover:scale-105">
+    @if (!isOpen()) {
+        ☰
+    } @else {
+        ✕
+    }
+
+</button>
+
+<!-- Fondo oscuro -->
+@if (isOpen()) {
+
+<div
+    (click)="closeMenu()"
+    class="fixed inset-0 z-40 bg-black/40">
+</div>
+
+}
+
+<!-- Panel -->
+<div
+    class="fixed top-0 right-0 z-50 h-screen w-72 bg-[#477053] text-white shadow-2xl transition-transform duration-300"
+    [class.translate-x-full]="!isOpen()">
+
+    <div class="mt-10 flex flex-col">
+        <a
+            routerLink="/dashboard"
+            (click)="closeMenu()"
+            class="px-8 py-5 text-xl hover:bg-green-800 flex">
+            <img src="/casa.png" alt="Inicio" class="w-5 h-5 mt-1 mr-3"> 
+                Inicio
+        </a>
+
+        <a
+            routerLink="/plants"
+            (click)="closeMenu()"
+            class="px-8 py-5 text-xl hover:bg-green-800 flex">
+            <img src="/planta.png" alt="Plantas" class="w-5 h-5 mt-1 mr-3"> 
+                Mis plantas
+        </a>
+
+        <a
+            routerLink="/calendar"
+            (click)="closeMenu()"
+            class="px-8 py-5 text-xl hover:bg-green-800 flex">
+            <img src="/calendario.png" alt="Calendario" class="w-5 h-5 mt-1 mr-3"> 
+            Calendario
+        </a>
+
+        <a
+            routerLink="/profile"
+            (click)="closeMenu()"
+            class="px-8 py-5 text-xl hover:bg-green-800 flex">
+            <img src="/avatar.png" alt="Perfil" class="w-5 h-5 mt-1 mr-3"> Perfil
+        </a>
+
+        <a
+            routerLink="/settings"
+            (click)="closeMenu()"
+            class="px-8 py-5 text-xl hover:bg-green-800 flex">
+            <img src="/configuracion.png" alt="Configuracion" class="w-5 h-5 mt-1 mr-3"> Configuración
+        </a>
+
+    </div>
+
+</div>

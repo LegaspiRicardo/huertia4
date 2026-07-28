@@ -1,0 +1,45 @@
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 border-t bg-white">
+    <div class="mx-auto flex max-w-md justify-around py-4">
+        <a class="flex flex-col items-center text-[#4F7D5C]">
+            🏠
+            <span class="text-xs">
+                Inicio
+            </span>
+        </a>
+
+        <a class="flex flex-col items-center">
+            🌱
+            <span class="text-xs">
+                Plantas
+            </span>
+        </a>
+
+        <button
+            class="-mt-10 flex h-16 w-16 items-center justify-center rounded-full bg-[#4F7D5C] text-3xl text-white shadow-lg"
+            (click)="openActionRegisterModal()">
+            +
+        </button>
+
+        <a class="flex flex-col items-center">
+            📅
+            <span class="text-xs">
+                Agenda
+            </span>
+        </a>
+
+        <a class="flex flex-col items-center">
+            👤
+            <span class="text-xs">
+                Perfil
+            </span>
+        </a>
+    </div>
+</nav>
+
+
+<app-action-register-modal
+    [open]="showActionRegisterModal()"
+    (close)="closeActionRegisterModal()">
+</app-action-register-modal>
+
