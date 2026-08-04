@@ -1,0 +1,28 @@
+    <app-floating-menu></app-floating-menu>
+<div
+    class="min-h-dvh bg-[#F4F8F2]">
+
+    <header
+        class="sticky bg-[#F4F8F2] pt-8 px-6">
+        <h1
+            class="text-3xl font-bold text-[#36523C]">
+            Mis plantas
+        </h1>
+
+        <p
+            class="mt-2 text-gray-500">
+            Desbloquea nuevas especies registrando tus cultivos.
+        </p>
+    </header>
+
+    <section
+        class="grid grid-cols-2 gap-4 px-6 pb-32 mt-8">
+        @for(plant of plants; track plant.id){
+            <app-plant-card
+                [plant]="plant">
+            </app-plant-card>
+        }
+    </section>
+</div>
+
+<app-bottom-navbar></app-bottom-navbar>
