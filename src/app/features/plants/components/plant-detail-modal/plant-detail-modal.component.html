@@ -1,0 +1,193 @@
+@if(open){
+
+<div
+    class="fixed inset-0 z-50 flex items-end justify-center bg-black/60 backdrop-blur-sm">
+
+    <div
+
+        (touchstart)="touchStart($event)"
+        (touchend)="touchEnd($event)"
+
+        class="relative max-h-[95vh] w-full overflow-y-auto rounded-t-3xl bg-white">
+
+        <!-- Botón cerrar -->
+
+        <button
+            (click)="closeModal()"
+            class="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow">
+
+            ✕
+
+        </button>
+
+        <!-- Flecha izquierda -->
+
+        <button
+
+            (click)="previousPlant()"
+
+            class="absolute left-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow">
+
+            ◀
+
+        </button>
+
+        <!-- Flecha derecha -->
+
+        <button
+
+            (click)="nextPlant()"
+
+            class="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow">
+
+            ▶
+
+        </button>
+
+        <!-- Imagen -->
+
+        <img
+
+            [src]="currentPlant.image"
+
+            [alt]="currentPlant.name"
+
+            class="h-72 w-full object-cover">
+
+        <div class="space-y-6 p-6">
+
+            <div>
+
+                <div class="flex items-center justify-between">
+
+                    <h1
+                        class="text-3xl font-bold text-[#36523C]">
+
+                        {{currentPlant.name}}
+
+                    </h1>
+
+                    <span
+                        class="text-sm text-gray-400">
+
+                        {{currentIndex + 1}} / {{plants.length}}
+
+                    </span>
+
+                </div>
+
+                <p
+                    class="italic text-gray-500">
+
+                    {{currentPlant.scientificName}}
+
+                </p>
+
+            </div>
+
+            <hr>
+
+            @if(currentPlant.cultivated){
+
+                <div
+                    class="rounded-xl bg-green-100 p-4 text-green-700">
+
+                    🌱 Ya forma parte de tu colección.
+
+                </div>
+
+            }@else{
+
+                <div
+                    class="rounded-xl bg-gray-100 p-4 text-gray-600">
+
+                    Todavía no has registrado esta especie.
+
+                </div>
+
+            }
+
+            <section>
+
+                <h2 class="mb-2 text-xl font-semibold">
+
+                    Descripción
+
+                </h2>
+
+                <p class="leading-7 text-gray-600">
+
+                    Próximamente esta información será obtenida desde
+                    Growstuff y posteriormente enriquecida por la comunidad
+                    de HuertIA.
+
+                </p>
+
+            </section>
+
+            <section class="grid grid-cols-2 gap-4">
+
+                <div class="rounded-2xl bg-[#F4F8F2] p-4">
+
+                    ☀️
+
+                    <p class="mt-2 font-semibold">
+
+                        Pleno sol
+
+                    </p>
+
+                </div>
+
+                <div class="rounded-2xl bg-[#F4F8F2] p-4">
+
+                    💧
+
+                    <p class="mt-2 font-semibold">
+
+                        Riego moderado
+
+                    </p>
+
+                </div>
+
+                <div class="rounded-2xl bg-[#F4F8F2] p-4">
+
+                    ⭐
+
+                    <p class="mt-2 font-semibold">
+
+                        Fácil
+
+                    </p>
+
+                </div>
+
+                <div class="rounded-2xl bg-[#F4F8F2] p-4">
+
+                    🌿
+
+                    <p class="mt-2 font-semibold">
+
+                        Anual
+
+                    </p>
+
+                </div>
+
+            </section>
+
+            <button
+                class="mb-8 w-full rounded-2xl bg-[#4F7D5C] py-4 text-white">
+
+                Ver aportaciones de la comunidad
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+}
