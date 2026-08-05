@@ -12,7 +12,7 @@ export class PlantsService {
             id: 1,
             name: 'Tomate',
             scientificName: 'Solanum lycoper',
-            image: '/plantas/tomate.jpg',
+            image: '/plantas/tomate.webp',
             unlocked: true
         },
 
@@ -20,7 +20,7 @@ export class PlantsService {
             id: 2,
             name: 'Lechuga',
             scientificName: 'Lactuca sativa',
-            image: '/plantas/lechuga.jpg',
+            image: '/plantas/lechuga.webp',
             unlocked: true
         },
 
@@ -28,7 +28,7 @@ export class PlantsService {
             id: 3,
             name: 'Zanahoria',
             scientificName: 'Daucus carota',
-            image: '/plantas/zanahoria.jpg',
+            image: '/plantas/zanahoria.webp',
             unlocked: false
         },
 
@@ -36,7 +36,7 @@ export class PlantsService {
             id: 4,
             name: 'Chile',
             scientificName: 'Capsicum annuum',
-            image: '/plantas/chile.jpg',
+            image: '/plantas/chile.webp',
             unlocked: false
         },
 
@@ -44,7 +44,7 @@ export class PlantsService {
             id: 5,
             name: 'Pepino',
             scientificName: 'Cucumis sativus',
-            image: '/plantas/pepino.jpg',
+            image: '/plantas/pepino.webp',
             unlocked: false
         },
 
@@ -52,7 +52,7 @@ export class PlantsService {
             id: 6,
             name: 'Espinaca',
             scientificName: 'Spinacia oleracea',
-            image: '/plantas/espinaca.jpg',
+            image: '/plantas/espinaca.webp',
             unlocked: true
         },
 
@@ -60,7 +60,7 @@ export class PlantsService {
             id: 7,
             name: 'Fresa',
             scientificName: 'Fragaria',
-            image: '/plantas/fresa.jpg',
+            image: '/plantas/fresa.webp',
             unlocked: false
         },
 
@@ -68,7 +68,7 @@ export class PlantsService {
             id: 8,
             name: 'Papa',
             scientificName: 'Solanum tuberosum',
-            image: '/plantas/papa.jpg',
+            image: '/plantas/papa.webp',
             unlocked: false
         },
 
@@ -76,7 +76,7 @@ export class PlantsService {
             id: 9,
             name: 'Cebolla',
             scientificName: 'Allium cepa',
-            image: '/plantas/cebolla.jpg',
+            image: '/plantas/cebolla.webp',
             unlocked: true
         }
 
