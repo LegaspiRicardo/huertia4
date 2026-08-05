@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
 
-import { MyPlantsComponent } from './pages/my-plants/my-plants.component';
+import { PlantsComponent } from './pages/plants/plants.component';
 
 export default [
 
     {
         path: '',
-        component: MyPlantsComponent
+        component: PlantsComponent
     }
 
 ] satisfies Routes;

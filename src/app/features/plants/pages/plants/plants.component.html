@@ -1,0 +1,31 @@
+<app-floating-menu></app-floating-menu>
+
+<div class="min-h-dvh bg-[#F4F8F2] pb-32">
+
+    <header class="sticky top-0 z-10 bg-[#F4F8F2] px-6 pt-8 pb-4">
+
+        <h1 class="text-3xl font-bold text-[#36523C]">
+            Enciclopedia
+        </h1>
+
+        <p class="mt-2 text-gray-500">
+            Explora todas las especies disponibles en HuertIA.
+        </p>
+
+    </header>
+
+    <section class="mt-4 grid grid-cols-2 gap-5 px-6">
+
+        @for (plant of plants; track plant.id) {
+
+            <app-plant-card
+                [plant]="plant">
+            </app-plant-card>
+
+        }
+
+    </section>
+
+</div>
+
+<app-bottom-navbar></app-bottom-navbar>

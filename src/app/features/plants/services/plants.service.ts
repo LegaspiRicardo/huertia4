@@ -13,7 +13,7 @@ export class PlantsService {
             name: 'Tomate',
             scientificName: 'Solanum lycoper',
             image: '/plantas/tomate.webp',
-            unlocked: true
+            cultivated: true
         },
 
         {
@@ -21,7 +21,7 @@ export class PlantsService {
             name: 'Lechuga',
             scientificName: 'Lactuca sativa',
             image: '/plantas/lechuga.webp',
-            unlocked: true
+            cultivated: true
         },
 
         {
@@ -29,7 +29,7 @@ export class PlantsService {
             name: 'Zanahoria',
             scientificName: 'Daucus carota',
             image: '/plantas/zanahoria.webp',
-            unlocked: false
+                        cultivated: true
         },
 
         {
@@ -37,7 +37,7 @@ export class PlantsService {
             name: 'Chile',
             scientificName: 'Capsicum annuum',
             image: '/plantas/chile.webp',
-            unlocked: false
+                        cultivated: true
         },
 
         {
@@ -45,7 +45,7 @@ export class PlantsService {
             name: 'Pepino',
             scientificName: 'Cucumis sativus',
             image: '/plantas/pepino.webp',
-            unlocked: false
+                        cultivated: false
         },
 
         {
@@ -53,7 +53,7 @@ export class PlantsService {
             name: 'Espinaca',
             scientificName: 'Spinacia oleracea',
             image: '/plantas/espinaca.webp',
-            unlocked: true
+                        cultivated: true
         },
 
         {
@@ -61,7 +61,7 @@ export class PlantsService {
             name: 'Fresa',
             scientificName: 'Fragaria',
             image: '/plantas/fresa.webp',
-            unlocked: false
+                        cultivated: true
         },
 
         {
@@ -69,7 +69,7 @@ export class PlantsService {
             name: 'Papa',
             scientificName: 'Solanum tuberosum',
             image: '/plantas/papa.webp',
-            unlocked: false
+             cultivated: false
         },
 
         {
@@ -77,7 +77,7 @@ export class PlantsService {
             name: 'Cebolla',
             scientificName: 'Allium cepa',
             image: '/plantas/cebolla.webp',
-            unlocked: true
+             cultivated: true
         }
 
     ];
