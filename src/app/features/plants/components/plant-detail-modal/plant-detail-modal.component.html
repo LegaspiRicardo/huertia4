@@ -20,107 +20,58 @@
 
         </button>
 
-        <!-- Flecha izquierda -->
 
-        <button
-
-            (click)="previousPlant()"
-
-            class="absolute left-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow">
-
-            ◀
-
-        </button>
-
-        <!-- Flecha derecha -->
-
-        <button
-
-            (click)="nextPlant()"
-
-            class="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white p-3 shadow">
-
-            ▶
-
-        </button>
 
         <!-- Imagen -->
 
         <img
 
             [src]="currentPlant.image"
-
             [alt]="currentPlant.name"
-
             class="h-72 w-full object-cover">
-
         <div class="space-y-6 p-6">
 
             <div>
-
                 <div class="flex items-center justify-between">
-
                     <h1
                         class="text-3xl font-bold text-[#36523C]">
-
                         {{currentPlant.name}}
-
                     </h1>
 
-                    <span
-                        class="text-sm text-gray-400">
 
-                        {{currentIndex + 1}} / {{plants.length}}
 
-                    </span>
+            @if(currentPlant.cultivated){
+                <div
+                    class="rounded-xl bg-green-100 p-4 text-green-700">
+                    Ya registrada
+                </div>
+            }@else{
+
+                <div
+                    class="rounded-xl bg-gray-300 p-4 text-gray-600">
+                    Sin registro
+                </div>
+            }
 
                 </div>
 
                 <p
                     class="italic text-gray-500">
-
                     {{currentPlant.scientificName}}
-
                 </p>
-
             </div>
 
             <hr>
 
-            @if(currentPlant.cultivated){
-
-                <div
-                    class="rounded-xl bg-green-100 p-4 text-green-700">
-
-                    🌱 Ya forma parte de tu colección.
-
-                </div>
-
-            }@else{
-
-                <div
-                    class="rounded-xl bg-gray-100 p-4 text-gray-600">
-
-                    Todavía no has registrado esta especie.
-
-                </div>
-
-            }
 
             <section>
 
                 <h2 class="mb-2 text-xl font-semibold">
-
                     Descripción
-
                 </h2>
 
-                <p class="leading-7 text-gray-600">
-
-                    Próximamente esta información será obtenida desde
-                    Growstuff y posteriormente enriquecida por la comunidad
-                    de HuertIA.
-
+                <p class="leading-7 text-gray-600 text-justify">
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga quam odit similique officia quo cupiditate sint laudantium possimus numquam commodi ab cumque incidunt dolorem eaque nisi, architecto et qui asperiores consequatur facere recusandae. Fugiat saepe perferendis unde, ex totam nisi numquam alias laborum, accusantium asperiores, quaerat ut eligendi? Maxime, sunt.
                 </p>
 
             </section>
