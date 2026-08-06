@@ -12,7 +12,13 @@ export const routes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
     {path: 'dashboard', component: DashboardComponent},
-    {path: 'plants', loadChildren:()=>import('./features/plants/plants.routes')}
+    {path: 'plants', loadChildren:()=>import('./features/plants/plants.routes')},
+    {path: 'cultivation', loadChildren: () =>import('./features/cultivation/cultivation.routes')},
+
+        {
+        path: '**',
+        redirectTo: ''
+    }
 ];
 
 
